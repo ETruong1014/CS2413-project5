@@ -151,7 +151,7 @@ int main()
     int* bubResult = bubbleSort(A, n, D);
 
     // display bubResult
-    for (int i = 0; i < D; i++) {
+    for (int i = 0; i < n; i++) {
     	cout << bubResult[i] << " ";
     }
     cout << endl;
@@ -200,7 +200,7 @@ int main()
     int* shellResult = shellSort(A, n, D);
 
     // display shellResult
-    for (int i = 0; i < D; i++) {
+    for (int i = 0; i < n; i++) {
     	cout << shellResult[i] << " ";
     }
     cout << endl;
