@@ -62,13 +62,13 @@ int* shellSort(int* arr, int numElements, int D)
             int temp = arr[i]; //temporarily store current value
             j = i - inc; //index of value to compare to
 
-            numComp++; // incrementing the number of comparisons done right before
-                        // the if condition where the comparison happens each time
-            if(numComp >= D) // checking for number of comparisons
-                return arr; // return the not necessarily sorted array = approximately sorted array
-
             while ((j >= 0) && (arr[j] > temp)) //compares elements in left part of range to swap find insertion point
             {
+                numComp++; // incrementing the number of comparisons done right before
+                            // the if condition where the comparison happens each time
+                if(numComp >= D) // checking for number of comparisons
+                    return arr; // return the not necessarily sorted array = approximately sorted array
+
                 arr[j + inc] = arr[j];
                 j = j - inc;
             }
@@ -81,13 +81,13 @@ int* shellSort(int* arr, int numElements, int D)
         int temp = arr[i]; //temporarily store current value
         j = i - 1; //index of value to compare to
 
-        numComp++; // incrementing the number of comparisons done right before
-                    // the if condition where the comparison happens each time
-        if(numComp >= D) // checking for number of comparisons
-            return arr; // return the not necessarily sorted array = approximately sorted array
-
         while ((j >= 0) && (arr[j] > temp)) //compares elements in left part of range to swap and find insertion point
         {
+            numComp++; // incrementing the number of comparisons done right before
+                        // the if condition where the comparison happens each time
+            if(numComp >= D) // checking for number of comparisons
+                return arr; // return the not necessarily sorted array = approximately sorted array
+
             arr[j + 1] = arr[j];
             j = j - 1;
         }
