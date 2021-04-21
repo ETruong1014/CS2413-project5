@@ -131,7 +131,7 @@ int main()
 	for (int i = 0; i < n; i++) {
 		cout << A[i] << " ";
 	}
-	cout << endl;
+	cout << endl << endl;
 
     // use one of the sorting algorithms with the third argument for D as n*n (for bubble sort) and store the fully sorted result
 	int* sortedA = bubbleSort(A, n, n*n);
@@ -141,7 +141,7 @@ int main()
 	for (int i = 0; i < n; i ++) {
 		cout << sortedA[i] << " ";
 	}
-	cout << endl;
+	cout << endl << endl;
 
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -154,7 +154,7 @@ int main()
     for (int i = 0; i < n; i++) {
     	cout << bubResult[i] << " ";
     }
-    cout << endl;
+    cout << endl << endl;
 
     // find both the quality metrics for bubResult
     int bubInvNum = 0; //number of inversions needed to sort bubResult
@@ -165,7 +165,7 @@ int main()
     		}
     	}
     }
-    cout << "Bubble Sort Inversion Number: " << bubInvNum << endl;
+    cout << "Number of inversions in bubResult: " << bubInvNum << endl;
 
     int bubChebyshev = 0; //Chebyshev distance of bubResult
     int displacement; //displacement of values;
@@ -190,7 +190,7 @@ int main()
     		}
     	}
     }
-    cout << "Bubble Sort Chebyshev Distance: " << bubChebyshev << endl;
+    cout << "Chebyshev distance in bubResult: " << bubChebyshev << endl << endl;
 
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -203,7 +203,7 @@ int main()
     for (int i = 0; i < n; i++) {
     	cout << shellResult[i] << " ";
     }
-    cout << endl;
+    cout << endl << endl;
 
     // find both the quality metrics for shellResult
     int shellInvNum = 0; //number of inversions needed to sort shellResult
@@ -214,7 +214,7 @@ int main()
         	}
         }
     }
-    cout << "Shell Sort Inversion Number: " << shellInvNum << endl;
+    cout << "Number of inversions in shellResult: " << shellInvNum << endl;
 
     int shellChebyshev = 0; //Chebyshev distance of bubResult
     for (int i = 0; i < n; i++) { //iterate through all values of shellResult
@@ -238,7 +238,7 @@ int main()
        		}
        	}
     }
-    cout << "Shell Sort Chebyshev Distance: " << shellChebyshev << endl;
+    cout << "Chebyshev distance in shellResult: " << shellChebyshev << endl << endl;
 
     return 0;
 }
